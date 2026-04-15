@@ -7,4 +7,4 @@ resources:
   - ingress-preview.yaml
 images:
   - name: ghcr.io/gateszhangc/learn-claude-code
-    newTag: 2fe2ff923f25d3223c1202cf61a8c5d414cae86f
+    newTag: 6f57a9fdc3c95a04a260dbd950db736ee1d24b24
