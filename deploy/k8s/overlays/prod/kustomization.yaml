@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../base
   - ingress-live.yaml
+  - ingress-live-www-redirect.yaml
   - ingress-preview.yaml
 images:
   - name: ghcr.io/gateszhangc/learn-claude-code

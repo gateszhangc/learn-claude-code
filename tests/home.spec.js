@@ -51,6 +51,8 @@ test("site config exposes analytics settings for production wiring", async ({ pa
 
   expect(body).toContain("clarityProjectId");
   expect(body).toContain("wc06my50va");
+  expect(body).toContain("googleAnalyticsId");
+  expect(body).toContain("G-W8SKCFRZ8C");
 });
 
 test("desktop and mobile layouts render without collapsing key sections", async ({ page }, testInfo) => {

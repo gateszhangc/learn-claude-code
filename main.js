@@ -1,5 +1,6 @@
 const yearNode = document.querySelector("#year");
 const siteConfig = window.__SITE_CONFIG__ ?? {};
+const isLocalRuntime = ["127.0.0.1", "localhost"].includes(window.location.hostname);
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
@@ -13,7 +14,7 @@ const injectScript = (src) => {
 };
 
 const setupGoogleAnalytics = () => {
-  if (!siteConfig.googleAnalyticsId) {
+  if (!siteConfig.googleAnalyticsId || isLocalRuntime) {
     return;
   }
 
@@ -30,7 +31,7 @@ const setupGoogleAnalytics = () => {
 };
 
 const setupClarity = () => {
-  if (!siteConfig.clarityProjectId) {
+  if (!siteConfig.clarityProjectId || isLocalRuntime) {
     return;
   }
 

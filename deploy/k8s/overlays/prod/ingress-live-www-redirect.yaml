@@ -1,22 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: learn-claude-code-live
+  name: learn-claude-code-live-www-redirect
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    cert-manager.io/issue-temporary-certificate: "true"
+    argocd.argoproj.io/sync-wave: "1"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/permanent-redirect: https://learn-claude-code.lol
+    nginx.ingress.kubernetes.io/permanent-redirect-code: "308"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: nginx
   tls:
     - secretName: learn-claude-code-lol-tls
       hosts:
-        - learn-claude-code.lol
         - www.learn-claude-code.lol
   rules:
-    - host: learn-claude-code.lol
+    - host: www.learn-claude-code.lol
       http:
         paths:
           - path: /
