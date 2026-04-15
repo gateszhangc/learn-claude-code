@@ -73,7 +73,7 @@ jobs:
           path = Path("deploy/k8s/overlays/prod/kustomization.yaml")
           content = path.read_text()
           updated, count = re.subn(
-              r"(^\\s*newTag:\\s*).*$",
+              r"(^\s*newTag:\s*).*$",
               lambda match: f"{match.group(1)}{os.environ['IMAGE_TAG']}",
               content,
               count=1,
