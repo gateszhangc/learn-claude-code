@@ -1,0 +1,6 @@
+2026-04-15T22:56:23+08:00 first browser-test attempt started against python http.server
+2026-04-15T22:58:13+08:00 classified as transient_error because local server accepted connections but did not return responses
+2026-04-15T22:58:30+08:00 switched static server implementation to http-server and restarted preview service
+2026-04-15T22:59:37+08:00 second browser-test attempt started
+2026-04-15T23:00:08+08:00 playwright passed: 8 tests
+2026-04-15T23:00:08+08:00 batch completed

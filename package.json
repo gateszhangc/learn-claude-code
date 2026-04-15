@@ -1,0 +1,16 @@
+{
+  "name": "learn-claude-code-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "brand": "python3 scripts/generate_brand_assets.py",
+    "build:config:dev": "node scripts/render_site_config.mjs .env.development > site-config.js",
+    "build:config:prod": "node scripts/render_site_config.mjs .env.production > site-config.js",
+    "serve": "http-server . -a 127.0.0.1 -p 4173 -c-1",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "http-server": "^14.1.1"
+  }
+}

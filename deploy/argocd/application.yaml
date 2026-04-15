@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: learn-claude-code
+  namespace: argocd
+spec:
+  project: learn-claude-code
+  source:
+    repoURL: https://github.com/gateszhangc/learn-claude-code.git
+    targetRevision: main
+    path: deploy/k8s/overlays/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: learn-claude-code
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

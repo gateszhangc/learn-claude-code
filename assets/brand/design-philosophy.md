@@ -1,0 +1,11 @@
+# Signal Ledger
+
+Signal Ledger treats information as something pressed into material rather than merely written on top of it. Space is not a neutral container here; it behaves like ruled paper, drafting film, and terminal glass layered into one surface. Every composition should feel meticulously crafted, as though a master designer spent countless hours aligning each edge, interval, and weight until the page became an instrument rather than a layout. The work must carry the calm authority of deep expertise, with form doing the explanation before language is ever asked to speak.
+
+Color in this movement is restrained but exacting. Warm paper tones, dark ink fields, and one measured electric accent create a palette that feels both editorial and computational. Nothing should look accidental. The green signal accent is not decorative; it is a controlled pulse that directs attention with painstaking precision. The entire result should feel labored over with care, the product of someone operating at the top of their field, where every tonal relationship has been tested and refined.
+
+Rhythm comes from repeated marks, disciplined grids, and moments of intentional interruption. Dense technical structures should meet large zones of breathing room so the eye experiences both analysis and confidence. Shapes should feel engineered but not sterile: circles, rails, brackets, and registers arranged with master-level execution. The composition must suggest that invisible systems can be mapped if one looks closely enough, and that this mapping required patience, judgment, and exacting craftsmanship.
+
+Typography, when present, must behave as visual architecture. Words are sparse, slender, and placed with surgical intent. A heading can anchor a field; a label can imply an index; a monogram can carry the emotional charge of a whole identity. Nothing verbose belongs here. The final work should feel painstakingly tuned, with typography integrated so seamlessly into the structure that it looks inseparable from the surface itself.
+
+Above all, Signal Ledger insists on evidence of human care. The finished artifact should never feel generic, automatic, or merely functional. It must look meticulously crafted, patiently revised, and almost over-qualified for its purpose: the kind of object that proves mastery by how quietly and confidently it holds together.

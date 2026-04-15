@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Claude Code | A Practical Starter Guide for Developers</title>
+    <meta
+      name="description"
+      content="Learn Claude Code with a practical developer-friendly guide covering setup, prompting, workflows, safety habits, and real project loops."
+    />
+    <meta
+      name="keywords"
+      content="learn claude code, Claude Code guide, Claude Code tutorial, Claude Code workflow"
+    />
+    <meta name="theme-color" content="#111827" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://learn-claude-code.lol/" />
+    <meta name="author" content="Learn Claude Code" />
+    <meta property="og:site_name" content="Learn Claude Code" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Learn Claude Code Faster" />
+    <meta
+      property="og:description"
+      content="Start with the essential Claude Code workflow: install it, prompt it well, stay safe, and turn it into a real project loop."
+    />
+    <meta property="og:url" content="https://learn-claude-code.lol/" />
+    <meta property="og:image" content="https://learn-claude-code.lol/assets/brand/og-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Learn Claude Code Faster" />
+    <meta
+      name="twitter:description"
+      content="A practical guide for developers learning Claude Code from first install to repeatable workflow."
+    />
+    <meta name="twitter:image" content="https://learn-claude-code.lol/assets/brand/og-card.png" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Learn Claude Code",
+            "url": "https://learn-claude-code.lol/",
+            "description": "A practical guide for developers who want to learn Claude Code faster.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://learn-claude-code.lol/#examples",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Organization",
+            "name": "Learn Claude Code",
+            "url": "https://learn-claude-code.lol/",
+            "logo": "https://learn-claude-code.lol/assets/brand/logo.svg"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the fastest way to learn Claude Code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Start with one small project, learn the core terminal workflow, and repeat a simple loop of inspect, prompt, verify, and refine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a big codebase before using Claude Code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Claude Code works well on small repos, starter projects, and static sites. The key is to keep scope tight and give concrete instructions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I avoid bad prompts and risky changes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Give the model a clear goal, inspect the codebase first, use review and test loops, and keep destructive actions explicit and constrained."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Learn Claude Code home">
+          <img src="/assets/brand/logo.svg" alt="Learn Claude Code" />
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#why">Why</a>
+          <a href="#learning-path">Path</a>
+          <a href="#examples">Examples</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="nav-cta" href="#learning-path">Start Learning</a>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Keyword-first guide for developers</p>
+            <h1>Learn Claude Code with a workflow you can actually repeat.</h1>
+            <p class="hero-text">
+              This page gives you the shortest path from “I installed it” to “I
+              can use Claude Code on real work without making a mess.”
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#learning-path">Start Learning</a>
+              <a class="button button-secondary" href="#examples">See Real Commands</a>
+            </div>
+            <ul class="hero-points" aria-label="Key outcomes">
+              <li>Install and orient in minutes</li>
+              <li>Prompt with clearer constraints</li>
+              <li>Build a safer inspect → edit → verify loop</li>
+            </ul>
+          </div>
+          <aside class="hero-panel" aria-label="Workflow preview">
+            <div class="terminal-card">
+              <div class="terminal-top">
+                <span></span><span></span><span></span>
+              </div>
+              <p>$ codex ask "Audit this feature before editing."</p>
+              <p class="terminal-muted">1. inspect the repo</p>
+              <p class="terminal-muted">2. clarify the task</p>
+              <p class="terminal-muted">3. make targeted edits</p>
+              <p class="terminal-muted">4. run tests and verify</p>
+            </div>
+            <div class="insight-note">
+              <strong>Core habit:</strong>
+              <span>small scopes, explicit constraints, visible verification.</span>
+            </div>
+          </aside>
+        </section>
+
+        <section id="why" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Why this guide exists</p>
+            <h2>Most people do not need more features. They need a steadier loop.</h2>
+          </div>
+          <div class="card-grid">
+            <article class="info-card">
+              <h3>Start with repo truth</h3>
+              <p>
+                Good Claude Code sessions begin with file reads, context gathering,
+                and a concrete target instead of a vague “build this.”
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Prompt for action</h3>
+              <p>
+                Useful prompts define outcome, constraints, affected files,
+                acceptance criteria, and what must not change.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Verify every step</h3>
+              <p>
+                The workflow only becomes trustworthy when you pair edits with
+                tests, browser checks, or explicit local validation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="learning-path" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Learning path</p>
+            <h2>Follow these four steps to learn Claude Code faster.</h2>
+          </div>
+          <div class="path-list">
+            <article class="path-step">
+              <span class="step-index">01</span>
+              <div>
+                <h3>Install the CLI and open a small repo</h3>
+                <p>
+                  Your first success should be in a project you can understand
+                  end to end. Avoid giant unknown repos at the start.
+                </p>
+              </div>
+            </article>
+            <article class="path-step">
+              <span class="step-index">02</span>
+              <div>
+                <h3>Practice inspect-first prompts</h3>
+                <p>
+                  Ask for repo analysis, conventions, likely entry points, and a
+                  crisp plan before you request edits.
+                </p>
+              </div>
+            </article>
+            <article class="path-step">
+              <span class="step-index">03</span>
+              <div>
+                <h3>Use narrow edit scopes and explicit guardrails</h3>
+                <p>
+                  Tell Claude Code which folder, file, interface, or behavior is
+                  in scope. Constraint quality changes output quality.
+                </p>
+              </div>
+            </article>
+            <article class="path-step">
+              <span class="step-index">04</span>
+              <div>
+                <h3>Close the loop with tests and browser validation</h3>
+                <p>
+                  Learning sticks when every change ends in a visible result:
+                  passing tests, screenshots, or a working page in the browser.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="examples" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Command examples</p>
+            <h2>Copy the mindset, not just the command.</h2>
+          </div>
+          <div class="examples-grid">
+            <article class="example-card">
+              <h3>Understand the codebase</h3>
+              <pre><code>codex ask "Inspect this repo and tell me:
+- likely entry points
+- key configs
+- how to run tests
+- where I should edit first"</code></pre>
+            </article>
+            <article class="example-card">
+              <h3>Make a controlled change</h3>
+              <pre><code>codex ask "Update the homepage copy only.
+Do not change layout structure.
+Run relevant tests after editing."</code></pre>
+            </article>
+            <article class="example-card">
+              <h3>Review before landing</h3>
+              <pre><code>codex ask "Review this diff for regressions,
+missing tests, and risky assumptions.
+Findings first."</code></pre>
+            </article>
+          </div>
+        </section>
+
+        <section class="section signal-strip" aria-label="Key principles">
+          <p>Inspect first.</p>
+          <p>Prompt precisely.</p>
+          <p>Constrain scope.</p>
+          <p>Verify visibly.</p>
+        </section>
+
+        <section id="faq" class="section faq-section">
+          <div class="section-head">
+            <p class="eyebrow">FAQ</p>
+            <h2>Common questions when you start to learn Claude Code.</h2>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>What is the fastest way to learn Claude Code?</summary>
+              <p>
+                Pick one small repo, ask the model to inspect it, then run a tight
+                loop: read files, plan, edit one thing, and verify the result.
+              </p>
+            </details>
+            <details>
+              <summary>Should I use it only for coding?</summary>
+              <p>
+                No. Claude Code is strongest when it combines analysis, planning,
+                editing, testing, and review in one consistent terminal workflow.
+              </p>
+            </details>
+            <details>
+              <summary>How do I keep it safe on real projects?</summary>
+              <p>
+                Use explicit scope limits, inspect before edit, avoid destructive
+                commands by default, and require tests or browser checks on every
+                meaningful change.
+              </p>
+            </details>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-tagline">Learn Claude Code with less drift and better feedback loops.</p>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="#examples">Examples</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <p class="footer-meta">© <span id="year"></span> Learn Claude Code</p>
+      </footer>
+    </div>
+
+    <script src="/site-config.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

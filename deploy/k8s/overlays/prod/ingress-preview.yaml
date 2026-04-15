@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: learn-claude-code-preview
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - secretName: learn-claude-code-preview-tls
+      hosts:
+        - learn-claude-code.144.91.77.245.sslip.io
+  rules:
+    - host: learn-claude-code.144.91.77.245.sslip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: learn-claude-code
+                port:
+                  number: 80

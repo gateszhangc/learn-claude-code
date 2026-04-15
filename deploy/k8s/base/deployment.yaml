@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learn-claude-code
+  labels:
+    app.kubernetes.io/name: learn-claude-code
+    app.kubernetes.io/part-of: learn-claude-code
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: learn-claude-code
+      app.kubernetes.io/part-of: learn-claude-code
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: learn-claude-code
+        app.kubernetes.io/part-of: learn-claude-code
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/gateszhangc/learn-claude-code:bootstrap
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /robots.txt
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /robots.txt
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          startupProbe:
+            httpGet:
+              path: /robots.txt
+              port: http
+            failureThreshold: 24
+            periodSeconds: 5
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi

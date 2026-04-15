@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: learn-claude-code
+  namespace: argocd
+spec:
+  description: learn-claude-code application managed from the application repository
+  sourceRepos:
+    - https://github.com/gateszhangc/learn-claude-code.git
+  destinations:
+    - namespace: learn-claude-code
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"

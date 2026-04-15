@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: learn-claude-code
+  labels:
+    app.kubernetes.io/name: learn-claude-code
+    app.kubernetes.io/part-of: learn-claude-code
